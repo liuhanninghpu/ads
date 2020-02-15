@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="" />
+    <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/CommonStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsPlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/unit_condition/AdsUnitDistrict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/unit_condition/AdsUnitIt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/unit_condition/AdsUnitKeyword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,11 +24,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache\apache-maven-3.5.4\MavenRepository" />
+        <option name="mavenHome" value="D:/apache/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\apache\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -23,21 +48,35 @@
     </option>
   </component>
   <component name="ProjectId" id="1XZYvCDgx6POwFqLKIRVsey2tjV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\source\matt-ads-spring-cloud\ads-service\ads-sponsor\src\main\resources" />
+    </key>
+  </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -76,6 +115,21 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@67eca15f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -90,11 +144,28 @@
       <workItem from="1581344173762" duration="122000" />
       <workItem from="1581344326955" duration="1945000" />
       <workItem from="1581424189372" duration="18424000" />
-      <workItem from="1581662781313" duration="7251000" />
+      <workItem from="1581662781313" duration="17224000" />
+      <workItem from="1581754139513" duration="998000" />
+      <workItem from="1581755247998" duration="362000" />
+      <workItem from="1581755722738" duration="3670000" />
+      <workItem from="1581759413324" duration="2398000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
