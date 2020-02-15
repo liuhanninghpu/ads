@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ads-common" />
+        <module name="ads-gateway" />
+        <module name="ads-eureka" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ads-common" options="-parameters" />
+      <module name="ads-eureka" options="-parameters" />
+      <module name="ads-gateway" options="-parameters" />
+      <module name="ads-service" options="-parameters" />
+    </option>
+  </component>
+</project>

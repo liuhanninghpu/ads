@@ -1,0 +1,67 @@
+spring:
+  application:
+    name: ads-eureka
+
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+#单机注册，禁用自己注册自己
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+
+#多机互相注册
+#执行 mav clean package -Dmaven.test.skip=true -U
+#打jar包完成之后在执行
+#cd target
+#java -jar ads-eureka-1.0-SHAPSHOT.jar --spring.profiles.active=server1
+#java -jar ads-eureka-1.0-SHAPSHOT.jar --spring.profiles.active=server2
+#java -jar ads-eureka-1.0-SHAPSHOT.jar --spring.profiles.active=server3
+#spring:
+#  application:
+#    name: ads-eureka
+#  profiles: server1
+#server:
+#  port: 8000
+#eureka:
+#  instance:
+#    hostname: server1
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://server2:8001/eureka,http://server3:8002/eureka
+#---
+#spring:
+#  application:
+#    name: ads-eureka
+#  profiles: server2
+#server:
+#  port: 8001
+#eureka:
+#  instance:
+#    hostname: server2
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://server1:8000/eureka,http://server3:8002/eureka
+#---
+#spring:
+#  application:
+#    name: ads-eureka
+#  profiles: server3
+#server:
+#  port: 8002
+#eureka:
+#  instance:
+#    hostname: server3
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://server1:8000/eureka,http://server2:8001/eureka
+
