@@ -4,9 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum CreativeMaterialType {
-    JPG(1,"jpg"),
-    BMP(2,"bmp"),
-    PNG(3,"png"),
+    JPG(1,"JPG"),
+    BMP(2,"BMP"),
+    PNG(3,"PNG"),
 
     MP4(4,"MP4"),
     AVI(5,"AVI"),
@@ -20,5 +20,4 @@ public enum CreativeMaterialType {
         this.type = type;
         this.desc = desc;
     }
-
 }

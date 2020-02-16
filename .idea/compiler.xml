@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ads-common" />
-        <module name="ads-sponsor" />
-        <module name="ads-gateway" />
         <module name="ads-eureka" />
+        <module name="ads-gateway" />
+        <module name="ads-sponsor" />
       </profile>
     </annotationProcessing>
   </component>

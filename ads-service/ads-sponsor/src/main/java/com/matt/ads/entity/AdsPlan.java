@@ -33,6 +33,10 @@ public class AdsPlan {
     private Integer planStatus;
 
     @Basic
+    @Column(name = "is_delete",nullable = false)
+    private Integer isDelete;
+
+    @Basic
     @Column(name = "start_date",nullable = false)
     private Date startDate;
 
@@ -54,6 +58,7 @@ public class AdsPlan {
         this.startDate = startDate;
         this.endDate = endDate;
         this.planStatus = CommonStatus.VALID.getStatus();
+        this.isDelete =  CommonStatus.VALID.getStatus();
     }
 
 }
