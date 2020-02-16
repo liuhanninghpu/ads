@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/commonUtils/CommonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/CreativeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/AdsCreativeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/AdsPlanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/AdsUnitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/AdsUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/unit_condition/AdsCreativeUnitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/unit_condition/AdsUnitDistrictRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/unit_condition/AdsUnitItRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/dao/unit_condition/AdsUnitKeywordRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsCreative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/unit_condition/AdsCreativeUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/IAdsPlanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/IAdsUnitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/impl/AdsPlanServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/impl/AdsUnitServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsPlanGetRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsPlanRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsPlanResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitRequestRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/CreateUserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/CreateUserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitGetRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/CreativeMaterialType.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/CreativeMaterialType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/entity/AdsUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/IAdsUnitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/IAdsUnitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/impl/AdsUnitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/service/impl/AdsUnitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitRequestRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/java/com/matt/ads/vo/AdsUnitResponse.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +161,7 @@
       <workItem from="1581755247998" duration="362000" />
       <workItem from="1581755722738" duration="3670000" />
       <workItem from="1581759413324" duration="10602000" />
-      <workItem from="1581833988476" duration="11179000" />
+      <workItem from="1581833988476" duration="14154000" />
     </task>
     <task id="LOCAL-00001" summary="新增entity">
       <created>1581762019777</created>
@@ -201,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581776436478</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新广告计划广告单元增删改查">
+      <created>1581846206185</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581846206185</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +205,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增entity" />
+    <MESSAGE value="更新广告计划广告单元增删改查" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新广告计划广告单元增删改查" />
   </component>
 </project>
