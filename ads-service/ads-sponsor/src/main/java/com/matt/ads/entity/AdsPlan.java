@@ -58,7 +58,7 @@ public class AdsPlan {
         this.startDate = startDate;
         this.endDate = endDate;
         this.planStatus = CommonStatus.VALID.getStatus();
-        this.isDelete =  CommonStatus.VALID.getStatus();
+        this.isDelete =  CommonStatus.INVALID.getStatus();
     }
 
 }

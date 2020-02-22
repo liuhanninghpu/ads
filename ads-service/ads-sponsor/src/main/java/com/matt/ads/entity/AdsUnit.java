@@ -49,6 +49,11 @@ public class AdsUnit {
     @Column(name = "update_time",nullable = false)
     private Date updateTime;
 
+    @Basic
+    @Column(name = "is_delete",nullable = false)
+    private Integer isDelete;
+
+
     public AdsUnit(Long planId,String unitName,Integer positionType,Long budget){
         this.planId = planId;
         this.unitName = unitName;
@@ -57,5 +62,6 @@ public class AdsUnit {
         this.budget = budget;
         this.createTime = new Date();
         this.updateTime = this.createTime;
+        this.isDelete =  CommonStatus.INVALID.getStatus();
     }
 }

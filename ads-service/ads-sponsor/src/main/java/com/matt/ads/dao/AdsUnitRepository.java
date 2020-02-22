@@ -1,5 +1,6 @@
 package com.matt.ads.dao;
 
+import com.matt.ads.entity.AdsPlan;
 import com.matt.ads.entity.AdsUnit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -10,4 +11,7 @@ public interface AdsUnitRepository extends JpaRepository<AdsUnit,Long> {
 
         List<AdsUnit> findAllByUnitStatus(Integer unitStatus);
 
+        List<AdsUnit> findAllByIdInAndUserId(List<Long> ids, Long userId);
+
+        AdsUnit findbyId(Long id);
 }

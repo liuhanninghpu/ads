@@ -13,5 +13,7 @@ public class Constants {
         public static final String ADS_SPONSOR_PLAN_NOT_FOUND = "推广计划不存在";
 
         public static final String ADS_SPONSOR_SAME_UNIT_ERROR= "推广单元已存在";
+
+        public static final String ADS_SPONSOR_UNIT_NOT_FOUND= "推广单元已存在";
     }
 }

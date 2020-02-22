@@ -89,8 +89,8 @@ public class AdsPlanServiceImpl implements IAdsPlanService {
                 throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_PLAN_NOT_FOUND);
             }
 
-            if(request.getStartDate() != null){
-                plan.setPlanName(request.getPlanName());
+        if(request.getStartDate() != null){
+            plan.setPlanName(request.getPlanName());
         }
 
         if(request.getStartDate() != null){
@@ -118,7 +118,7 @@ public class AdsPlanServiceImpl implements IAdsPlanService {
             throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_PLAN_NOT_FOUND);
         }
 
-        plan.setIsDelete(CommonStatus.INVALID.getStatus());
+        plan.setIsDelete(CommonStatus.VALID.getStatus());
         plan.setPlanStatus(CommonStatus.INVALID.getStatus());
         planRepository.save(plan);
     }

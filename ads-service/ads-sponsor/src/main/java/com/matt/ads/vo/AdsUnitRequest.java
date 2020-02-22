@@ -9,11 +9,13 @@ import org.apache.commons.lang.StringUtils;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AdsUnitRequest {
+    private Long id;
     private Long planId;
     private String unitName;
 
     private Integer positionType;
     private Long budget;
+    private Integer unitStatus;
 
     public boolean createValidate(){
         return null != planId
@@ -23,12 +25,17 @@ public class AdsUnitRequest {
     }
 
     public boolean updateValidate(){
-        return null != planId;
+        return null != planId
+                && id != null;
     }
 
 
     public boolean deleteValidate(){
-        return null != planId;
+        return null != id;
     }
 
+
+    public boolean validate(){
+        return null != id;
+    }
 }
