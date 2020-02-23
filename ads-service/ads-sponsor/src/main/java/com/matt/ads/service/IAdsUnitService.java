@@ -1,10 +1,9 @@
 package com.matt.ads.service;
 
 import com.matt.ads.entity.AdsUnit;
+import com.matt.ads.entity.unit_condition.AdsUnitDistrict;
 import com.matt.ads.exception.AdsException;
-import com.matt.ads.vo.AdsUnitGetRequest;
-import com.matt.ads.vo.AdsUnitRequest;
-import com.matt.ads.vo.AdsUnitResponse;
+import com.matt.ads.vo.*;
 
 import java.util.List;
 
@@ -19,4 +18,10 @@ public interface IAdsUnitService {
 
 
     List<AdsUnit> getUnit(AdsUnitGetRequest request) throws AdsException;
+
+    AdsUnitKeywordResponse createUnitKeyword(AdsUnitKeywordRequest request) throws AdsException;
+
+    AdsUnitItResponse createUnitIt(AdsUnitItRequest request) throws AdsException;
+
+    AdsUnitDistrictResponse createUnitDistrict(AdsUnitDistrictRequest request) throws AdsException;
 }

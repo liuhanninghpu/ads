@@ -4,29 +4,43 @@ import com.matt.ads.constant.CommonStatus;
 import com.matt.ads.constant.Constants;
 import com.matt.ads.dao.AdsPlanRepository;
 import com.matt.ads.dao.AdsUnitRepository;
+import com.matt.ads.dao.unit_condition.AdsUnitDistrictRepository;
+import com.matt.ads.dao.unit_condition.AdsUnitItRepository;
+import com.matt.ads.dao.unit_condition.AdsUnitKeywordRepository;
 import com.matt.ads.entity.AdsPlan;
 import com.matt.ads.entity.AdsUnit;
+import com.matt.ads.entity.unit_condition.AdsUnitDistrict;
+import com.matt.ads.entity.unit_condition.AdsUnitIt;
+import com.matt.ads.entity.unit_condition.AdsUnitKeyword;
 import com.matt.ads.exception.AdsException;
 import com.matt.ads.service.IAdsUnitService;
-import com.matt.ads.vo.AdsUnitGetRequest;
-import com.matt.ads.vo.AdsUnitRequest;
-import com.matt.ads.vo.AdsUnitResponse;
+import com.matt.ads.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 
 import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class AdsUnitServiceImpl implements IAdsUnitService {
 
     private final AdsUnitRepository unitRepository;
     private final AdsPlanRepository planRepository;
+    private final AdsUnitKeywordRepository unitKeywordRepository;
+    private final AdsUnitItRepository unitItRepository;
+    private final AdsUnitDistrictRepository unitDistrictRepository;
 
     @Autowired
     public AdsUnitServiceImpl(AdsUnitRepository unitRepository,
-                              AdsPlanRepository planReRepository){
+                              AdsPlanRepository planReRepository,
+                              AdsUnitKeywordRepository unitKeywordRepository,
+                              AdsUnitItRepository unitItRepository,
+                              AdsUnitDistrictRepository unitDistrictRepository){
         this.unitRepository = unitRepository;
         this.planRepository = planReRepository;
+        this.unitItRepository = unitItRepository;
+        this.unitKeywordRepository = unitKeywordRepository;
+        this.unitDistrictRepository = unitDistrictRepository;
     }
 
     @Override
@@ -120,4 +134,74 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
         );
     }
 
+    @Override
+    public AdsUnitKeywordResponse createUnitKeyword(AdsUnitKeywordRequest request) throws AdsException {
+        List<Long> unitIds = request.getUnitKeywords().stream()
+                .map(AdsUnitKeywordRequest.UnitKeyWord::getUnitId)
+                .collect(Collectors.toList());
+        if(!isRelatedUnitExist(unitIds)){
+            throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_QEQUEST_PARAM_ERROR);
+        }
+
+        List<Long> ids = Collections.emptyList();
+
+        List<AdsUnitKeyword> unitKeywords = new ArrayList<>();
+        if(!CollectionUtils.isEmpty(request.getUnitKeywords())){
+            request.getUnitKeywords().forEach(i-> unitKeywords.add(
+                    new AdsUnitKeyword(i.getUnitId(),i.getKeyword())
+            ));
+            ids = unitKeywordRepository.saveAll(unitKeywords).stream()
+                    .map(AdsUnitKeyword::getId).collect(Collectors.toList());
+        }
+
+        return new AdsUnitKeywordResponse(ids);
+    }
+
+    @Override
+    public AdsUnitItResponse createUnitIt(AdsUnitItRequest request) throws AdsException {
+        List<Long> unitIds = request.getUnitIts().stream().
+                map(AdsUnitItRequest.UnitIt::getUnitId).
+                collect(Collectors.toList());
+
+        if(!isRelatedUnitExist(unitIds)){
+              throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_QEQUEST_PARAM_ERROR);
+        }
+        List<AdsUnitIt> unitIts = new ArrayList<>();
+        request.getUnitIts().forEach(i -> unitIts.add(
+                new AdsUnitIt(i.getUnitId(), i.getItTag())
+        ));
+        List<Long> ids = unitItRepository.saveAll(unitIts).stream().map(
+                AdsUnitIt::getId
+        ).collect(Collectors.toList());
+
+        return new AdsUnitItResponse(ids);
+    }
+
+    @Override
+    public AdsUnitDistrictResponse createUnitDistrict(AdsUnitDistrictRequest request) throws AdsException{
+        List<Long> unitIds = request.getUnitDistricts().stream().
+                map(AdsUnitDistrictRequest.UnitDistrict::getUnitId).
+                collect(Collectors.toList());
+
+        if(!isRelatedUnitExist(unitIds)){
+            throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_QEQUEST_PARAM_ERROR);
+        }
+        List<AdsUnitDistrict> unitDistricts = new ArrayList<>();
+        request.getUnitDistricts().forEach(d->unitDistricts.add(
+                new AdsUnitDistrict(d.getUnitId(),d.getProvince(),d.getCity())
+        ));
+        List<Long> ids = unitDistrictRepository.saveAll(unitDistricts).stream().map(
+                AdsUnitDistrict::getId
+        ).collect(Collectors.toList());
+
+        return new AdsUnitDistrictResponse(ids);
+    }
+
+    private boolean isRelatedUnitExist(List<Long> unitIds){
+        if(CollectionUtils.isEmpty(unitIds)){
+            return false;
+        }
+        return unitRepository.findAllById(unitIds).size() ==
+                new HashSet<>(unitIds).size();
+    }
 }
