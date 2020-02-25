@@ -1,5 +1,6 @@
 package com.matt.ads.service;
 
+import com.matt.ads.entity.AdsCreative;
 import com.matt.ads.entity.AdsUnit;
 import com.matt.ads.entity.unit_condition.AdsUnitDistrict;
 import com.matt.ads.exception.AdsException;
@@ -24,4 +25,6 @@ public interface IAdsUnitService {
     AdsUnitItResponse createUnitIt(AdsUnitItRequest request) throws AdsException;
 
     AdsUnitDistrictResponse createUnitDistrict(AdsUnitDistrictRequest request) throws AdsException;
+
+    AdsCreativeUnitResponse creativeUnit(AdsCreativeUnitRequest request) throws AdsException;
 }

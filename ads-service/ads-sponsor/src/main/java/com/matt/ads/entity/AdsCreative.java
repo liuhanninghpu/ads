@@ -31,7 +31,7 @@ public class AdsCreative {
       */
      @Basic
      @Column(name = "material_type",nullable = false)
-     private Integer material_type;
+     private Integer materialType;
 
     @Basic
     @Column(name = "height",nullable = false)
@@ -64,7 +64,7 @@ public class AdsCreative {
 
     @Basic
     @Column(name = "user_id",nullable = false)
-    private Integer userId;
+    private Long userId;
 
     @Basic
     @Column(name = "url",nullable = false)
@@ -85,12 +85,12 @@ public class AdsCreative {
                        Integer width,
                        Long size,
                        Integer duration,
-                       Integer userId,
+                       Long userId,
                        String url
     ){
         this.name = name;
         this.type = type;
-        this.material_type = material_type;
+        this.materialType = material_type;
         this.height = height;
         this.width = width;
         this.size = size;

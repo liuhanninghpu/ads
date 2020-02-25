@@ -2,8 +2,10 @@ package com.matt.ads.service.impl;
 
 import com.matt.ads.constant.CommonStatus;
 import com.matt.ads.constant.Constants;
+import com.matt.ads.dao.AdsCreativeRepository;
 import com.matt.ads.dao.AdsPlanRepository;
 import com.matt.ads.dao.AdsUnitRepository;
+import com.matt.ads.dao.unit_condition.AdsCreativeUnitRepository;
 import com.matt.ads.dao.unit_condition.AdsUnitDistrictRepository;
 import com.matt.ads.dao.unit_condition.AdsUnitItRepository;
 import com.matt.ads.dao.unit_condition.AdsUnitKeywordRepository;
@@ -17,10 +19,12 @@ import com.matt.ads.service.IAdsUnitService;
 import com.matt.ads.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
+import sun.rmi.runtime.Log;
 
 import javax.transaction.Transactional;
 import java.util.*;
 import java.util.stream.Collectors;
+
 
 public class AdsUnitServiceImpl implements IAdsUnitService {
 
@@ -29,18 +33,24 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     private final AdsUnitKeywordRepository unitKeywordRepository;
     private final AdsUnitItRepository unitItRepository;
     private final AdsUnitDistrictRepository unitDistrictRepository;
+    private final AdsCreativeRepository creativeRepository;
+    private final AdsCreativeUnitRepository creativeUnitRepository;
 
     @Autowired
     public AdsUnitServiceImpl(AdsUnitRepository unitRepository,
                               AdsPlanRepository planReRepository,
                               AdsUnitKeywordRepository unitKeywordRepository,
                               AdsUnitItRepository unitItRepository,
-                              AdsUnitDistrictRepository unitDistrictRepository){
+                              AdsUnitDistrictRepository unitDistrictRepository,
+                              AdsCreativeRepository creativeRepository,
+                              AdsCreativeUnitRepository creativeUnitRepository){
         this.unitRepository = unitRepository;
         this.planRepository = planReRepository;
         this.unitItRepository = unitItRepository;
         this.unitKeywordRepository = unitKeywordRepository;
         this.unitDistrictRepository = unitDistrictRepository;
+        this.creativeRepository = creativeRepository;
+        this.creativeUnitRepository = creativeUnitRepository;
     }
 
     @Override
@@ -135,6 +145,7 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     }
 
     @Override
+    @Transactional
     public AdsUnitKeywordResponse createUnitKeyword(AdsUnitKeywordRequest request) throws AdsException {
         List<Long> unitIds = request.getUnitKeywords().stream()
                 .map(AdsUnitKeywordRequest.UnitKeyWord::getUnitId)
@@ -158,6 +169,7 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     }
 
     @Override
+    @Transactional
     public AdsUnitItResponse createUnitIt(AdsUnitItRequest request) throws AdsException {
         List<Long> unitIds = request.getUnitIts().stream().
                 map(AdsUnitItRequest.UnitIt::getUnitId).
@@ -178,6 +190,7 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     }
 
     @Override
+    @Transactional
     public AdsUnitDistrictResponse createUnitDistrict(AdsUnitDistrictRequest request) throws AdsException{
         List<Long> unitIds = request.getUnitDistricts().stream().
                 map(AdsUnitDistrictRequest.UnitDistrict::getUnitId).
@@ -197,6 +210,15 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
         return new AdsUnitDistrictResponse(ids);
     }
 
+    @Override
+    @Transactional
+    public AdsCreativeUnitResponse creativeUnit(AdsCreativeUnitRequest request) throws AdsException {
+        List<Long> unitIds = request.getUnitItems().stream().map(
+            AdsCreativeUnitRequest.CreativeUnitItem::getUnitId
+        ).collect(Collectors.toList());
+        return null;
+    }
+
     private boolean isRelatedUnitExist(List<Long> unitIds){
         if(CollectionUtils.isEmpty(unitIds)){
             return false;
@@ -204,4 +226,14 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
         return unitRepository.findAllById(unitIds).size() ==
                 new HashSet<>(unitIds).size();
     }
+
+    private boolean isRelateCreativeExist(List<Long> creativeIds){
+        if(CollectionUtils.isEmpty(creativeIds)){
+            return false;
+        }
+
+        return creativeRepository.findAllById(creativeIds).size() ==
+                new HashSet<>(creativeIds).size();
+    }
+
 }
