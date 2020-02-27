@@ -1,7 +1,6 @@
 package com.matt.ads.vo;
 
 
-import com.matt.ads.entity.unit_condition.AdsUnitDistrict;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,8 +17,9 @@ public class AdsUnitDistrictRequest {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class UnitDistrict{
+    public static class AdsUnitDistrict{
         private Long unitId;
-        private String itTag;
+        private String province;
+        private String city;
     }
 }

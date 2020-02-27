@@ -1,8 +1,6 @@
 package com.matt.ads.vo;
 
 
-import com.matt.ads.entity.unit_condition.AdsUnitIt;
-import com.matt.ads.entity.unit_condition.AdsUnitKeyword;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -21,7 +19,7 @@ public class AdsUnitItRequest {
     @NoArgsConstructor
     @AllArgsConstructor
     @Getter
-    public static class UnitIt{
+    public static class AdsUnitIt{
         private Long unitId;
         private String itTag;
     }

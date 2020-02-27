@@ -11,6 +11,7 @@ import com.matt.ads.dao.unit_condition.AdsUnitItRepository;
 import com.matt.ads.dao.unit_condition.AdsUnitKeywordRepository;
 import com.matt.ads.entity.AdsPlan;
 import com.matt.ads.entity.AdsUnit;
+import com.matt.ads.entity.unit_condition.AdsCreativeUnit;
 import com.matt.ads.entity.unit_condition.AdsUnitDistrict;
 import com.matt.ads.entity.unit_condition.AdsUnitIt;
 import com.matt.ads.entity.unit_condition.AdsUnitKeyword;
@@ -19,7 +20,6 @@ import com.matt.ads.service.IAdsUnitService;
 import com.matt.ads.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
-import sun.rmi.runtime.Log;
 
 import javax.transaction.Transactional;
 import java.util.*;
@@ -148,7 +148,7 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     @Transactional
     public AdsUnitKeywordResponse createUnitKeyword(AdsUnitKeywordRequest request) throws AdsException {
         List<Long> unitIds = request.getUnitKeywords().stream()
-                .map(AdsUnitKeywordRequest.UnitKeyWord::getUnitId)
+                .map(AdsUnitKeywordRequest.AdsUnitKeyword::getUnitId)
                 .collect(Collectors.toList());
         if(!isRelatedUnitExist(unitIds)){
             throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_QEQUEST_PARAM_ERROR);
@@ -172,7 +172,7 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     @Transactional
     public AdsUnitItResponse createUnitIt(AdsUnitItRequest request) throws AdsException {
         List<Long> unitIds = request.getUnitIts().stream().
-                map(AdsUnitItRequest.UnitIt::getUnitId).
+                map(AdsUnitItRequest.AdsUnitIt::getUnitId).
                 collect(Collectors.toList());
 
         if(!isRelatedUnitExist(unitIds)){
@@ -193,7 +193,7 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
     @Transactional
     public AdsUnitDistrictResponse createUnitDistrict(AdsUnitDistrictRequest request) throws AdsException{
         List<Long> unitIds = request.getUnitDistricts().stream().
-                map(AdsUnitDistrictRequest.UnitDistrict::getUnitId).
+                map(AdsUnitDistrictRequest.AdsUnitDistrict::getUnitId).
                 collect(Collectors.toList());
 
         if(!isRelatedUnitExist(unitIds)){
@@ -206,7 +206,6 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
         List<Long> ids = unitDistrictRepository.saveAll(unitDistricts).stream().map(
                 AdsUnitDistrict::getId
         ).collect(Collectors.toList());
-
         return new AdsUnitDistrictResponse(ids);
     }
 
@@ -216,7 +215,26 @@ public class AdsUnitServiceImpl implements IAdsUnitService {
         List<Long> unitIds = request.getUnitItems().stream().map(
             AdsCreativeUnitRequest.CreativeUnitItem::getUnitId
         ).collect(Collectors.toList());
-        return null;
+
+        List<Long> creativeIds = request.getUnitItems().stream().map(
+                AdsCreativeUnitRequest.CreativeUnitItem::getCreativeId
+        ).collect(Collectors.toList());
+
+        if(!(isRelatedUnitExist(unitIds) && isRelatedUnitExist(creativeIds))){
+            throw new AdsException(Constants.ErrMsg.ADS_SPONSOR_QEQUEST_PARAM_ERROR);
+        }
+
+        List<AdsCreativeUnit> creativeUnits = new ArrayList<>();
+        request.getUnitItems().forEach(i -> creativeUnits.add(
+                new AdsCreativeUnit(i.getCreativeId(),i.getUnitId())
+        ));
+
+        List<Long> ids = creativeUnitRepository.saveAll(creativeUnits)
+                .stream()
+                .map(AdsCreativeUnit::getId)
+                .collect(Collectors.toList());
+
+        return new AdsCreativeUnitResponse(ids);
     }
 
     private boolean isRelatedUnitExist(List<Long> unitIds){

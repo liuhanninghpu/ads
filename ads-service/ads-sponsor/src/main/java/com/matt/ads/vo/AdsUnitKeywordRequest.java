@@ -1,7 +1,6 @@
 package com.matt.ads.vo;
 
 
-import com.matt.ads.entity.unit_condition.AdsUnitKeyword;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +16,7 @@ public class AdsUnitKeywordRequest {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class UnitKeyWord{
+    public static class AdsUnitKeyword{
         private Long unitId;
         private String keyword;
     }

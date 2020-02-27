@@ -20,7 +20,7 @@ public class AdsUnitDistrict {
 
     @Basic
     @Column(name = "unit_id",nullable = false)
-    private String unitId;
+    private Long unitId;
 
     @Basic
     @Column(name = "province",nullable = false)
@@ -30,7 +30,7 @@ public class AdsUnitDistrict {
     @Column(name = "city",nullable = false)
     private String city;
 
-    public AdsUnitDistrict(String unitId,String province,String city){
+    public AdsUnitDistrict(Long unitId,String province,String city){
         this.unitId = unitId;
         this.province = province;
         this.city = city;
