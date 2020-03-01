@@ -8,3 +8,11 @@ eureka:
     service-url:
       defaultZone: http://localhost:8000/eureka/
 
+
+zuul:
+  prefix: /matt
+  routes:
+    sponsor:
+      path: /ads-sponsor/**
+      serviceId: euraka-client-ads-sponsor
+      strip-prefix: false #跳过前缀
