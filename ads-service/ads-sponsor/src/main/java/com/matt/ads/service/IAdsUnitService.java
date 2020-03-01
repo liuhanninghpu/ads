@@ -26,5 +26,5 @@ public interface IAdsUnitService {
 
     AdsUnitDistrictResponse createUnitDistrict(AdsUnitDistrictRequest request) throws AdsException;
 
-    AdsCreativeUnitResponse creativeUnit(AdsCreativeUnitRequest request) throws AdsException;
+    AdsCreativeUnitResponse createcreativeUnit(AdsCreativeUnitRequest request) throws AdsException;
 }
