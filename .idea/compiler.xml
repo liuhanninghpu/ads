@@ -7,9 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ads-common" />
-        <module name="ads-eureka" />
-        <module name="ads-gateway" />
+        <module name="ads-search" />
         <module name="ads-sponsor" />
+        <module name="ads-gateway" />
+        <module name="ads-eureka" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
       <module name="ads-common" options="-parameters" />
       <module name="ads-eureka" options="-parameters" />
       <module name="ads-gateway" options="-parameters" />
+      <module name="ads-search" options="-parameters" />
       <module name="ads-service" options="-parameters" />
       <module name="ads-sponsor" options="-parameters" />
     </option>

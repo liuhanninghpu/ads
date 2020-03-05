@@ -12,6 +12,7 @@
         <module>ads-eureka</module>
         <module>ads-gateway</module>
         <module>ads-service</module>
+        <module>ads-search</module>
     </modules>
 
 
