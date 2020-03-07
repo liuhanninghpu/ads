@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/SearchApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/client/SponsorClientHystrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/client/vo/AdsPlan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/client/vo/AdsPlanGetRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/controller/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/IndexAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsPlan/AdsPlanIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsPlan/AdsPlanObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnit/AdsUnitIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnit/AdsUnitObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnitKeyword/AdsUnitKeywordObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnitDistrict/AdsUnitDistrictIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnitDistrict/AdsUnitDistrictObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnitIt/AdsUnitItIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnitIt/AdsUnitItObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnitKeyword/AdsUnitKeywordIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +175,8 @@
       <workItem from="1582639523655" duration="4852000" />
       <workItem from="1582813445356" duration="3461000" />
       <workItem from="1583041907754" duration="14637000" />
-      <workItem from="1583417469497" duration="3535000" />
+      <workItem from="1583417469497" duration="3758000" />
+      <workItem from="1583549155440" duration="7614000" />
     </task>
     <task id="LOCAL-00001" summary="新增entity">
       <created>1581762019777</created>
@@ -260,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583057277421</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新增索引实现">
+      <created>1583421368851</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583421368851</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +284,7 @@
     <MESSAGE value="更新控制器" />
     <MESSAGE value="更新创意控制器" />
     <MESSAGE value="新增广告检索" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增广告检索" />
+    <MESSAGE value="新增索引实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增索引实现" />
   </component>
 </project>
