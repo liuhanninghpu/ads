@@ -235,7 +235,7 @@ public class DumpDataService {
             }
             writer.close();
         } catch (IOException e) {
-            log.error("dumpAdsUnitKeywordTable error");
+            log.error("dumpAdsUnitItTable error");
         }
     }
 }

@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 @Component
-public class AdsUnitIndex implements IndexAware<Long,AdsUnitObject> {
+public class AdsUnitIndex implements IndexAware<Long, AdsUnitObject> {
 
     private static Map<Long,AdsUnitObject> objectMap;
 

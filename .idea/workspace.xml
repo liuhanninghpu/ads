@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/DConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsCreativeTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsCreativeUnitTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsPlanTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsUnitDistrictTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsUnitItTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsUnitKeywordTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-common/src/main/java/com/matt/ads/dump/table/AdsUnitTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/DataTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsCreative/AdsCreativeIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsCreative/AdsCreativeObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsCreativeUnit/AdsCreativeUnitIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsCreativeUnit/AdsCreativeUnitObject.java" afterDir="false" />
+    <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="新增索引实现">
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/handler/AdsLevelDataHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/constant/OpType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/service/DumpDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnit/AdsUnitIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnit/AdsUnitIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/utils/CommonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/service/DumpDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/service/DumpDataService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,15 +66,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\source\matt-ads-spring-cloud\ads-service\ads-sponsor\src\test\resources" />
-      <recent name="D:\source\matt-ads-spring-cloud\ads-service\ads-sponsor\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\source\matt-ads-spring-cloud\ads-search" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.matt.ads.vo" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\source\matt-ads-spring-cloud\ads-search" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\source\matt-ads-spring-cloud\ads-service\ads-sponsor\src\test\resources" />
+      <recent name="D:\source\matt-ads-spring-cloud\ads-service\ads-sponsor\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -188,7 +178,8 @@
       <workItem from="1583041907754" duration="14637000" />
       <workItem from="1583417469497" duration="3758000" />
       <workItem from="1583549155440" duration="16837000" />
-      <workItem from="1583637639853" duration="13996000" />
+      <workItem from="1583637639853" duration="17218000" />
+      <workItem from="1584276222156" duration="4485000" />
     </task>
     <task id="LOCAL-00001" summary="新增entity">
       <created>1581762019777</created>
@@ -274,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583570836481</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="新增导出数据">
+      <created>1583659026113</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583659026113</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +302,7 @@
     <MESSAGE value="更新创意控制器" />
     <MESSAGE value="新增广告检索" />
     <MESSAGE value="新增索引实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增索引实现" />
+    <MESSAGE value="新增导出数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增导出数据" />
   </component>
 </project>

@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ads-common" />
         <module name="ads-search" />
-        <module name="ads-sponsor" />
         <module name="ads-gateway" />
         <module name="ads-eureka" />
+        <module name="ads-sponsor" />
       </profile>
     </annotationProcessing>
   </component>
