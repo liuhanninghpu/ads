@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="新增索引实现">
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/handler/AdsLevelDataHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/constant/OpType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/JsonTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/ParseTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/TableTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/service/BinlogServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnit/AdsUnitIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/adsUnit/AdsUnitIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/index/utils/CommonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/service/DumpDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-sponsor/src/test/java/com/matt/ads/service/DumpDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,10 +93,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SponsorApplication">
+  <component name="RunManager" selected="Application.BinlogServiceTest">
+    <configuration name="BinlogServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.matt.ads.service.BinlogServiceTest" />
+      <module name="ads-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.ads.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ads-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.matt.ads.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ads-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.matt.ads.SearchApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinlogServiceTest" />
         <item itemvalue="Spring Boot.SponsorApplication" />
         <item itemvalue="Spring Boot.ZuulGatewayApplication" />
       </list>
@@ -179,7 +199,9 @@
       <workItem from="1583417469497" duration="3758000" />
       <workItem from="1583549155440" duration="16837000" />
       <workItem from="1583637639853" duration="17218000" />
-      <workItem from="1584276222156" duration="4485000" />
+      <workItem from="1584276222156" duration="7915000" />
+      <workItem from="1584365215336" duration="5645000" />
+      <workItem from="1584541308413" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="新增entity">
       <created>1581762019777</created>
@@ -272,7 +294,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583659026113</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="索引分级">
+      <created>1584281801585</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1584281801585</updated>
+    </task>
+    <task id="LOCAL-00015" summary="索引分级">
+      <created>1584371383787</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584371383795</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +339,7 @@
     <MESSAGE value="新增广告检索" />
     <MESSAGE value="新增索引实现" />
     <MESSAGE value="新增导出数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增导出数据" />
+    <MESSAGE value="索引分级" />
+    <option name="LAST_COMMIT_MESSAGE" value="索引分级" />
   </component>
 </project>

@@ -91,7 +91,7 @@
         <dependency>
             <groupId>com.github.shyiko</groupId>
             <artifactId>mysql-binlog-connector-java</artifactId>
-            <version>0.13.0</version>
+            <version>0.18.1</version>
         </dependency>
         <!-- 解析配置文件中的配置 -->
         <dependency>
