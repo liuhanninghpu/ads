@@ -13,6 +13,7 @@ import java.util.function.Supplier;
 public class ParseTemplate {
     private String database;
     private Map<String,TableTemplate> tableTemplateMap = new HashMap<>();
+
     public static ParseTemplate parse(Template _template){
         ParseTemplate template = new ParseTemplate();
         template.setDatabase(_template.getDatabases());

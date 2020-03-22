@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6934c18-ce47-4d83-a1fc-9db59650db6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/JsonTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/ParseTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/TableTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/service/BinlogServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/TemplateHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/constant/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/BinlogRowData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/MysqlRowData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/listener/AggregatioonListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/listener/Ilistener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/constant/OpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/constant/OpType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/ParseTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/ads-service/ads-search/src/main/java/com/matt/ads/mysql/dto/ParseTemplate.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +204,8 @@
       <workItem from="1583637639853" duration="17218000" />
       <workItem from="1584276222156" duration="7915000" />
       <workItem from="1584365215336" duration="5645000" />
-      <workItem from="1584541308413" duration="3324000" />
+      <workItem from="1584541308413" duration="3396000" />
+      <workItem from="1584860616308" duration="8231000" />
     </task>
     <task id="LOCAL-00001" summary="新增entity">
       <created>1581762019777</created>
@@ -308,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584371383795</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="监听binlog">
+      <created>1584544674381</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1584544674381</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +351,7 @@
     <MESSAGE value="新增索引实现" />
     <MESSAGE value="新增导出数据" />
     <MESSAGE value="索引分级" />
-    <option name="LAST_COMMIT_MESSAGE" value="索引分级" />
+    <MESSAGE value="监听binlog" />
+    <option name="LAST_COMMIT_MESSAGE" value="监听binlog" />
   </component>
 </project>
