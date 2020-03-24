@@ -16,7 +16,6 @@ public class BinlogServiceTest {
 
         client.registerEventListener(event -> {
             EventData data = event.getData();
-            System.out.println(data.toString());
             if(data instanceof UpdateRowsEventData){
                 System.out.println("Update -----");
                 System.out.println(data.toString());

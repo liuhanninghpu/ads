@@ -1,15 +1,15 @@
-package com.imooc.ad.mysql.constant;
+package com.matt.ads.mysql.constant;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Constant {
 
-    private static final String DB_NAME = "imooc_ad_data";
+    private static final String DB_NAME = "ads";
 
     public static class AD_PLAN_TABLE_INFO {
 
-        public static final String TABLE_NAME = "ad_plan";
+        public static final String TABLE_NAME = "ads_plan";
 
         public static final String COLUMN_ID = "id";
         public static final String COLUMN_USER_ID = "user_id";
@@ -20,7 +20,7 @@ public class Constant {
 
     public static class AD_CREATIVE_TABLE_INFO {
 
-        public static final String TABLE_NAME = "ad_creative";
+        public static final String TABLE_NAME = "ads_creative";
 
         public static final String COLUMN_ID = "id";
         public static final String COLUMN_TYPE = "type";
@@ -33,7 +33,7 @@ public class Constant {
 
     public static class AD_UNIT_TABLE_INFO {
 
-        public static final String TABLE_NAME = "ad_unit";
+        public static final String TABLE_NAME = "ads_unit";
 
         public static final String COLUMN_ID = "id";
         public static final String COLUMN_UNIT_STATUS = "unit_status";
@@ -43,7 +43,7 @@ public class Constant {
 
     public static class AD_CREATIVE_UNIT_TABLE_INFO {
 
-        public static final String TABLE_NAME = "creative_unit";
+        public static final String TABLE_NAME = "ads_creative_unit";
 
         public static final String COLUMN_CREATIVE_ID = "creative_id";
         public static final String COLUMN_UNIT_ID = "unit_id";
@@ -51,7 +51,7 @@ public class Constant {
 
     public static class AD_UNIT_DISTRICT_TABLE_INFO {
 
-        public static final String TABLE_NAME = "ad_unit_district";
+        public static final String TABLE_NAME = "ads_unit_district";
 
         public static final String COLUMN_UNIT_ID = "unit_id";
         public static final String COLUMN_PROVINCE = "province";
@@ -60,7 +60,7 @@ public class Constant {
 
     public static class AD_UNIT_IT_TABLE_INFO {
 
-        public static final String TABLE_NAME = "ad_unit_it";
+        public static final String TABLE_NAME = "ads_unit_it";
 
         public static final String COLUMN_UNIT_ID = "unit_id";
         public static final String COLUMN_IT_TAG = "it_tag";
@@ -68,7 +68,7 @@ public class Constant {
 
     public static class AD_UNIT_KEYWORD_TABLE_INFO {
 
-        public static final String TABLE_NAME = "ad_unit_keyword";
+        public static final String TABLE_NAME = "ads_unit_keyword";
 
         public static final String COLUMN_UNIT_ID = "unit_id";
         public static final String COLUMN_KEYWORD = "keyword";

@@ -38,4 +38,12 @@ management:
       exposure:
         include: "*"
 
-
+#配置
+adconf:
+  mysql:
+    host: localhost
+    port: 3306
+    username: root
+    password: 12345678
+    binlogName: ""
+    position: -1
