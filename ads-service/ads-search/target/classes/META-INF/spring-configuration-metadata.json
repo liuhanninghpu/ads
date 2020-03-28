@@ -1,0 +1,42 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql",
+      "type": "com.matt.ads.mysql.BinLogConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql.binlog-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql.position",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.matt.ads.mysql.BinLogConfig",
+      "name": "adconf.mysql.username",
+      "type": "java.lang.String"
+    }
+  ]
+}
